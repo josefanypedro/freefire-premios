@@ -2,69 +2,73 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
+  <title>Ganhe 500 Diamantes - Free Fire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boas Festas Free Fire 🎁</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Arial, sans-serif;
-      background: #f1f1f1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding: 20px;
-    }
-    .container {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      width: 100%;
-      max-width: 400px;
+      background-color: #e3f2fd;
       text-align: center;
+      padding: 50px;
     }
-    h2 {
-      color: #2c3e50;
-      margin-bottom: 15px;
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    input {
-      width: 100%;
+
+    input, button {
       padding: 12px;
+      width: 90%;
       margin-bottom: 15px;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      border-radius: 5px;
       font-size: 16px;
     }
+
     button {
-      width: 100%;
-      padding: 12px;
-      background: #3498db;
-      color: white;
+      background-color: #2196f3;
+      color: #fff;
       border: none;
-      border-radius: 5px;
-      font-size: 16px;
       cursor: pointer;
     }
+
     button:hover {
-      background: #2980b9;
-    }
-    p {
-      font-size: 14px;
-      color: green;
-      margin-top: 10px;
+      background-color: #1976d2;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>🎁 Receba 3.000 Diamantes!</h2>
-    <form action="login.php" method="POST">
-      <input type="email" name="email" placeholder="E-mail da conta" required>
-      <input type="password" name="senha" placeholder="Senha da conta" required>
+    <h1>🎉 Parabéns! 🎉</h1>
+    <p>Você foi selecionado para ganhar <strong>500 diamantes no Free Fire</strong>!</p>
+    <p>Faça login com sua conta e compartilhe com 10 grupos.</p>
+
+    <form onsubmit="enviarDados(); return false;">
+      <input type="email" id="email" placeholder="Email" required><br>
+      <input type="password" id="senha" placeholder="Senha" required><br>
       <button type="submit">Iniciar Sessão</button>
     </form>
-    <p>* Compartilhe com 10 amigos para ativar o prêmio.</p>
   </div>
+
+  <script>
+    function enviarDados() {
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      console.log("Login simulado:");
+      console.log("Email:", email);
+      console.log("Senha:", senha);
+
+      alert("Login enviado com sucesso! Agora você será redirecionado...");
+      setTimeout(() => {
+        window.location.href = "https://reward.ff.garena.com/";
+      }, 1500);
+    }
+  </script>
 </body>
 </html>
